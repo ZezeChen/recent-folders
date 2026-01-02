@@ -1,0 +1,39 @@
+{
+  "name": "recent-files-explorer",
+  "displayName": "Recent Files Explorer",
+  "description": "点击侧边栏图标，浏览最近的文件和文件夹",
+  "version": "0.0.2",
+  "publisher": "zezechen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zezechen/recent-files-explorer.git"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "recent-files-explorer",
+          "title": "最近文件",
+          "icon": "icon.png"
+        }
+      ]
+    },
+    "views": {
+      "recent-files-explorer": [
+        {
+          "id": "recentFilesView",
+          "name": "最近文件"
+        }
+      ]
+    }
+  }
+}
