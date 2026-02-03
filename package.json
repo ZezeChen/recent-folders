@@ -1,37 +1,43 @@
 {
-  "name": "recent-files-explorer",
-  "displayName": "Recent Files Explorer",
-  "description": "点击侧边栏图标，浏览最近的文件和文件夹",
+  "name": "recent-folders",
+  "displayName": "Recent Folders",
+  "description": "快速访问最近打开的文件夹",
   "version": "0.0.2",
   "publisher": "zezechen",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zezechen/recent-files-explorer.git"
-  },
+  "repository": "https://github.com/zezechen/recent-folders",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.80.0"
   },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Recent Folders",
+      "properties": {
+        "recentFolders.maxItems": {
+          "type": "number",
+          "default": 20,
+          "minimum": 1,
+          "maximum": 50,
+          "description": "显示的最近文件夹数量(范围：1-50)"
+        }
+      }
+    },
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "recent-files-explorer",
-          "title": "最近文件",
+          "id": "recent-folders",
+          "title": "最近文件夹",
           "icon": "icon.png"
         }
       ]
     },
     "views": {
-      "recent-files-explorer": [
+      "recent-folders": [
         {
-          "id": "recentFilesView",
-          "name": "最近文件"
+          "id": "recentFoldersView",
+          "name": "最近文件夹"
         }
       ]
     }
