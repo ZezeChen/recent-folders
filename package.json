@@ -2,7 +2,7 @@
   "name": "recent-folders",
   "displayName": "Recent Folders",
   "description": "快速访问最近打开的文件夹 / Quick access to recent folders",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "publisher": "zezechen",
   "repository": "https://github.com/zezechen/recent-folders",
   "icon": "icon.png",
@@ -19,7 +19,7 @@
           "default": 20,
           "minimum": 1,
           "maximum": 50,
-          "description": "显示的最近文件夹数量(范围：1-50)"
+          "description": "文件夹显示数量(范围：1-50)"
         }
       }
     },
@@ -27,7 +27,7 @@
       "activitybar": [
         {
           "id": "recent-folders",
-          "title": "最近文件夹",
+          "title": "最近打开的文件夹",
           "icon": "icon.png"
         }
       ]
@@ -36,7 +36,7 @@
       "recent-folders": [
         {
           "id": "recentFoldersView",
-          "name": "最近文件夹"
+          "name": "最近打开的文件夹"
         }
       ]
     }
