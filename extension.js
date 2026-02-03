@@ -21,7 +21,7 @@ const provider = {
     async getChildren(element) {
         if (element) return [];
         const folders = await fetchRecent();
-        const max = vscode.workspace.getConfiguration('recentFolders').get('maxItems', 10);
+        const max = vscode.workspace.getConfiguration('recentFolders').get('maxItems');
         return folders.slice(0, max).map(folder => {
             const uri = vscode.Uri.parse(folder.folderUri);
             const name = uri.fsPath.split(/[\\/]/).pop();

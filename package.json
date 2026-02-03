@@ -1,10 +1,9 @@
 {
   "name": "recent-folders",
   "displayName": "Recent Folders",
-  "description": "快速访问最近打开的文件夹",
+  "description": "快速访问最近打开的文件夹 / Quick access to recent folders",
   "version": "0.0.2",
   "publisher": "zezechen",
-  "license": "MIT",
   "repository": "https://github.com/zezechen/recent-folders",
   "icon": "icon.png",
   "engines": {
